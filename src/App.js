@@ -1,11 +1,8 @@
-
+import Header from "./Header"
 function App() {
   return (
     <div>
-        Phone Directory
-        <div className="header">
-          Phone Directory
-        </div>
+      <Header/>
         <button>Add</button>
         <div>
           <span>Name</span><br />
