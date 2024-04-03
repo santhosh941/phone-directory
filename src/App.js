@@ -1,7 +1,8 @@
+import React,{Component} from "react";
 import Header from "./Header"
 import "./App.css";
-function App() {
-  let subscribers=[
+import './common/common.css';
+  /*let subscribers=[
     {
       id: 1,
       name:"Santhosh",
@@ -12,8 +13,16 @@ function App() {
       name:"Harish",
       phone:"7948481394"
     }
-  ]
-  return (
+  ] */
+  class App extends Component{
+    constructor(){
+      super();
+      this.state={
+        subscribersListToShow:[]
+      }
+    }
+  render(){
+    return (
     <div>
       <Header heading=" Phone Directory"/>
       <div className="compement-body-container">
@@ -23,7 +32,7 @@ function App() {
             <span className="grid-item phone-heading">Phone</span>
         </div>
         {
-          subscribers.map(sub =>{
+          this.state.subscribersListToShow.map(sub =>{
             return <div key={sub.id} className="grid-container">
               <span className="grid-item">{sub.name}</span>
               <span className="grid-item">{sub.phone}</span>
@@ -37,5 +46,6 @@ function App() {
       </div>
   );
  }
+}
 
 export default App;
