@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import Header from "./Header"
-import "./App.css";
+import "./ShowSubscribers.css";
 import './common/common.css';
   /*let subscribers=[
     {
@@ -14,7 +14,7 @@ import './common/common.css';
       phone:"7948481394"
     }
   ] */
-  class App extends Component{
+  class ShowSubscribers extends Component{
     constructor(){
       super();
       this.state={
@@ -48,4 +48,4 @@ import './common/common.css';
  }
 }
 
-export default App;
+export default ShowSubscribers;
